@@ -1,0 +1,17 @@
+## How many useless reviews are there in the data set?
+
+egrep -o '"useful":.*, "cool"' yelp_academic_dataset_user.json | head
+
+Answer: 6322
+
+## How many restaurants recorded on Yelp is there in Phoenix?
+
+egrep -i -o '"Restaurants".*"city": "Phoenix"' yelp_academic_dataset_business.json | wc -l
+
+
+Answer: 1629
+
+##How many people had an excellent burger thanks to Yelp?
+egrep -i -o '"stars": 5.*Burger' yelp_academic_dataset_review.json | wc -l
+
+Answer: 3668
